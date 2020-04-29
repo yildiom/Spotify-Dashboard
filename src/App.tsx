@@ -11,11 +11,8 @@
 import React from "react";
 import { Router as BrowserRouter } from "react-router-dom";
 import Router from "./pages/Router";
-//import { createBrowserHistory } from "history";
-//import withConnectors from "./connectors";
 
 import history from "./custom-history";
-//const history = createBrowserHistory();
 
 class App extends React.PureComponent<{}> {
   render() {
@@ -28,4 +25,3 @@ class App extends React.PureComponent<{}> {
 }
 
 export default App;
-//withConnectors(App);

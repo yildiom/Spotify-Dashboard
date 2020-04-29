@@ -20,7 +20,7 @@ import { getCurrentlyPlaying } from "../../store/player/player.actions";
 const Home: React.FC = () => {
   const dispatch = useDispatch<Dispatch>();
   useEffect(() => {
-    dispatch(getAccessToken()); //buna gerek yok zaten reduxta olacak
+    dispatch(getAccessToken());
     dispatch(getUserInfo());
     dispatch(getUserAlbums());
     dispatch(getCurrentlyPlaying());

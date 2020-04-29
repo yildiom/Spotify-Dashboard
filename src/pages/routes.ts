@@ -3,11 +3,6 @@
  * & add it to the array of routes
  */
 import home from "./home";
-//import callback from "./callback";
 import profile from "./profile";
 
-export default [
-  home,
-  profile
-  //callback
-];
+export default [home, profile];
