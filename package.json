@@ -1,33 +1,86 @@
 {
-  "name": "client",
+  "name": "react-standard",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "serve": "serve -s build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@types/history": "^4.7.2",
+    "@types/uuid": "^7.0.2",
+    "axios": "^0.18.0",
+    "history": "^4.9.0",
+    "humps": "^2.0.1",
+    "lodash": "^4.17.11",
+    "query-string": "^6.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "redux": "^4.0.1",
+    "redux-act": "^1.7.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.2",
+    "styled-components": "^5.1.0",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-transform-template-literals": "^7.4.4",
+    "@types/humps": "^1.1.2",
+    "@types/lodash": "^4.14.122",
+    "@types/node": "^11.10.4",
+    "@types/query-string": "^6.2.0",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-helmet": "^5.0.8",
+    "@types/react-redux": "^7.0.1",
+    "@types/react-router": "^4.4.5",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/redux-logger": "^3.0.7",
+    "@types/styled-components": "^4.1.14",
+    "babel-loader": "8.0.5",
+    "babel-plugin-macros": "^2.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "husky": "^3.0.1",
+    "jest-styled-components": "^6.3.1",
+    "lint-staged": "^9.2.0",
+    "prettier": "^1.17.0",
+    "prop-types": "^15.7.2",
+    "react-test-renderer": "^16.8.6",
+    "require-context.macro": "^1.0.4",
+    "serve": "^11.0.0",
+    "source-map-explorer": "^1.8.0",
+    "typescript": "^3.4.5"
   },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
+      "not ie <= 11",
       "not op_mini all"
     ],
     "development": [
@@ -35,5 +88,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "babel-jest": "24.7.1"
   }
 }
