@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Spotify Dashboard App
 
-## Available Scripts
+## Front-end
+For the client side, the project uses **React, TypeScript, Redux, Redux-Saga, Redux-Act and Styled Components**.
 
-In the project directory, you can run:
+## Back-end
+For the server side, **Authorization Code flow**, provided by Spotify at https://github.com/spotify/web-api-auth-examples, is used.
 
-### `yarn start`
+## Functionality
+- When you search an artist, the first three albums of that artist are rendered in the **Results** sections
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- When you hover on and like an album, it is added to your favorite albums on your Spotify account
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Your favorite albums are rendered on **My favorite albums** section, where you can remove an album from your favorites, which removes that album on your Spotify account as well.
 
-### `yarn test`
+- If there is a currently playing song on your Spotify account, the album cover of that song will appear on the **Currently Playing** section
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- You can **play and pause** the currently playing song or **skip to the next or previous song**.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshot of the project
+![Screenshot-1](/src/assets/screenshots/Screenshot-1.png?raw=true "Screenshot-1")
+![Screenshot-2](/src/assets/screenshots/Screenshot-2.png?raw=true "Screenshot-2")
